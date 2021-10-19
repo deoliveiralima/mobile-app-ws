@@ -14,7 +14,6 @@ public class UserEntity implements Serializable {
 	private static final long serialVersionUID = -5897334653973786741L;
 	
 	@Id
-	@GeneratedValue
 	private long id;
 	
 	@Column(nullable=false)
@@ -22,20 +21,23 @@ public class UserEntity implements Serializable {
 	
 	@Column(nullable=false, length=50)
 	private String fristname;
+	
 	@Column(nullable=false, length=50)
 	private String lastname;
-	@Column(nullable=false, length = 120)
+	
+	@Column(nullable=false, length = 120, unique=true)
 	private String email;
+	
 	@Column(nullable=false)
 	private String encryptedPassword;
 	
-	@Column(nullable=false)
+	//@Column(nullable=false)
 	private String emailVerificationToken;
 	
 	@Column(nullable=false)
 	private Boolean emailVerificationStatus = false;
 
-	public long getId() {
+	public long getId() { 
 		return id;
 	}
 

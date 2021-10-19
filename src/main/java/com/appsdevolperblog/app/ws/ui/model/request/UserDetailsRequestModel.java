@@ -2,7 +2,7 @@ package com.appsdevolperblog.app.ws.ui.model.request;
 
 public class UserDetailsRequestModel {
 	private String fristname;
-	private String lastName;
+	private String lastname;
 	private String email;
 	private String password;
 	
@@ -14,11 +14,12 @@ public class UserDetailsRequestModel {
 	public void setFristname(String fristname) {
 		this.fristname = fristname;
 	}
-	public String getLastName() {
-		return lastName;
+	
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	public String getEmail() {
 		return email;

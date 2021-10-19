@@ -11,8 +11,8 @@ public class UserDto implements Serializable{
 
 	private long id;
 	private String userId;
-	private String fristName;
-	private String lastName;
+	private String fristname;
+	private String lastname;
 	private String email;
 	private String password;
 	private String encryptedPassword;
@@ -30,17 +30,18 @@ public class UserDto implements Serializable{
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getFristName() {
-		return fristName;
+	
+	public String getFristname() {
+		return fristname;
 	}
-	public void setFristName(String fristName) {
-		this.fristName = fristName;
+	public void setFristname(String fristname) {
+		this.fristname = fristname;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	public String getEmail() {
 		return email;

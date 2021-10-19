@@ -19,7 +19,7 @@ import com.appsdevolperblog.app.ws.ui.model.response.UserRest;
 @RequestMapping("users") // pre setting last part of url - http://localhsot:8080/users
 public class UserController {
 	@Autowired
-	UserService userService;
+	UserService userService;//#########################
 
 	@GetMapping // for http get methods
 	public String getUser() {
@@ -27,21 +27,17 @@ public class UserController {
 		return "get user was calles";
 	}
 	@PostMapping // for http POST method
-	public String createUser(@RequestBody UserDetailsRequestModel userDetails) {//to convert   json got from http request to java object
+	public UserRest createUser(@RequestBody UserDetailsRequestModel userDetails) {//to convert   json got from http request to java object
 		
-		UserRest returnValue = UserRest();
-		
+		UserRest returnValue = new UserRest();
 		UserDto userDto = new UserDto();
 		BeanUtils.copyProperties(userDetails, userDto);
 		
-		UserDto createdUser = userService createUser(userDto);
+		UserDto createdUser = userService.createUser(userDto);
 		BeanUtils.copyProperties(createdUser, returnValue);
 		
 		return returnValue; 
 		
-		
-		
-		return null;
 	}
 	
 	@PutMapping //for PUT method
